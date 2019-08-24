@@ -9,15 +9,15 @@ namespace SC.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AwsnerController : ControllerBase
+    public class AnswerController : ControllerBase
     {
-        private readonly ILogger<AwsnerController> _logger;
-        private readonly IAnswerServices _awsnerServices;
+        private readonly ILogger<AnswerController> _logger;
+        private readonly IAnswerServices _answerServices;
 
-        public AwsnerController(ILogger<AwsnerController> logger, IAnswerServices answerServices)
+        public AnswerController(ILogger<AnswerController> logger, IAnswerServices answerServices)
         {
             _logger = logger;
-            _awsnerServices = answerServices;
+            _answerServices = answerServices;
         }
 
         [HttpPost]
@@ -25,8 +25,8 @@ namespace SC.API.Controllers
         {
             try
             {
-                _logger.LogInformation("Post awsner");
-                _awsnerServices.Add(clientId, answer);
+                _logger.LogInformation("Post answer");
+                _answerServices.Add(clientId, answer);
 
                 return Ok("success");
             }

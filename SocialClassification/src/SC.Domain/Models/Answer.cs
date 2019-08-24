@@ -8,6 +8,6 @@ namespace SC.Domain.Models
     {
         public int ClientId { get; set; }
         public int QuestionId { get; set; }
-        public int ClientAwsner { get; set; }
+        public int ClientAnswer { get; set; }
     }
 }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SC.API.Controllers.Base;
@@ -34,7 +31,7 @@ namespace SC.API.Controllers
                 var result = _clientServices.Add(client);
                 if (result.ValidationResult.Errors.Any()) return AddValidationErrors(result.ValidationResult.Errors);
 
-                return Ok("success");
+                return Ok(result);
             }
             catch (Exception ex)
             {

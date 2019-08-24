@@ -32,19 +32,22 @@ CREATE TABLE Client
 ALTER TABLE Client
 ADD CONSTRAINT PK_CLIENT PRIMARY KEY (Id);
 
-CREATE TABLE Awsner
+ALTER TABLE Client
+ADD BirthDate datetime
+
+CREATE TABLE Answer
 (
 	Id integer identity(1,1),
 	ClientId integer,
 	QuestionId integer,
-	Awsner int
+	Answer int
 );
 
-ALTER TABLE Awsner
-ADD CONSTRAINT PK_AWSNER PRIMARY KEY (Id);
+ALTER TABLE Answer
+ADD CONSTRAINT PK_ANSWER PRIMARY KEY (Id);
 
-ALTER TABLE Awsner
+ALTER TABLE Answer
 ADD CONSTRAINT FK_Awsner_Client FOREIGN KEY (ClientId) REFERENCES Client(Id);
 
-ALTER TABLE Awsner
+ALTER TABLE Answer
 ADD CONSTRAINT FK_Awsner_Question FOREIGN KEY (QuestionId) REFERENCES Question(Id);

@@ -3,6 +3,6 @@
     public class AnswerRequestViewModel
     {
         public int QuestionId { get; set; }
-        public int Awsner { get; set; }
+        public int ClientAnswer { get; set; }
     }
 }

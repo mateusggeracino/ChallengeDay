@@ -10,7 +10,7 @@ namespace SC.Services.AutoMapper.Profiles
         {
             CreateMap<Client, ClientResponseViewModel>();
             CreateMap<Question, QuestionResponseViewModel>();
-            //CreateMap<Answer, AnswerResponseViewModel>();
+            CreateMap<Score, ScoreResponseViewModel>();
         }
     }
 }

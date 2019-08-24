@@ -19,9 +19,11 @@ namespace SC.API.Extensions
             services.AddTransient<IClientServices, ClientServices>();
             services.AddTransient<IAnswerServices, AnswerServices>();
             services.AddTransient<IQuestionServices, QuestionServices>();
+            services.AddTransient<IScoreServices, ScoreServices>();
 
             services.AddTransient<IClientBusiness, ClientBusiness>();
             services.AddTransient<IAnswerBusiness, AnswerBusiness>();
+            services.AddTransient<IScoreBusiness, ScoreBusiness>();
 
             services.AddTransient<IClientRepository, ClientRepository>();
             services.AddTransient<IAnswerRepository, AnswerRepository>();
