@@ -1,4 +1,5 @@
-﻿using SC.Domain.Models.Base;
+﻿using System.Collections.Generic;
+using SC.Domain.Models.Base;
 
 namespace SC.Repository.Interfaces
 {
@@ -8,5 +9,6 @@ namespace SC.Repository.Interfaces
         T Update(T obj);
         T GetById(int id);
         bool Delete(T obj);
+        IEnumerable<T> GetAll();
     }
 }

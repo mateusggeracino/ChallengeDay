@@ -1,6 +1,8 @@
-﻿namespace SC.Domain.Models
+﻿using SC.Domain.Models.Base;
+
+namespace SC.Domain.Models
 {
-    public class Question
+    public class Question : Entity
     {
         public string Description { get; set; }
         public int QuestionPointId { get; set; }

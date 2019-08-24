@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using Dapper.Contrib.Extensions;
 using Microsoft.Extensions.Configuration;
@@ -38,6 +39,11 @@ namespace SC.Repository.Repository
         {
             Conn.Delete(obj);
             return true;
+        }
+
+        public IEnumerable<T> GetAll()
+        {
+            return Conn.GetAll<T>();
         }
     }
 }
