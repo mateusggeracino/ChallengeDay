@@ -1,4 +1,5 @@
-﻿using FluentValidation.Results;
+﻿using Dapper.Contrib.Extensions;
+using FluentValidation.Results;
 
 namespace SC.Domain.Models.Base
 {
@@ -10,6 +11,8 @@ namespace SC.Domain.Models.Base
         }
 
         public int Id { get; set; }
+
+        [Write(false)]
         public ValidationResult ValidationResult { get; set; }
     }
 }

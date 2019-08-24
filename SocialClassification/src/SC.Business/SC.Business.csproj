@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Business\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\SC.Domain\SC.Domain.csproj" />
+    <ProjectReference Include="..\SC.Repository\SC.Repository.csproj" />
   </ItemGroup>
 
 </Project>
