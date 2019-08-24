@@ -1,6 +1,7 @@
 ﻿using SC.Business.Interfaces;
 using SC.Domain.Models;
 using SC.Domain.Validations;
+using SC.Repository.Interfaces;
 
 namespace SC.Business.Business
 {
