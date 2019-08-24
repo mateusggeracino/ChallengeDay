@@ -1,6 +1,6 @@
 ﻿namespace SC.Domain.Models
 {
-    public class QuestionPoint
+    public sealed class QuestionPoint
     {
         public int QuantityZero { get; set; }
         public int QuantityTwo { get; set; }

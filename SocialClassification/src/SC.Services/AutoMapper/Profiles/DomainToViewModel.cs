@@ -9,6 +9,8 @@ namespace SC.Services.AutoMapper.Profiles
         public DomainToViewModel()
         {
             CreateMap<Client, ClientResponseViewModel>();
+            CreateMap<Question, QuestionResponseViewModel>();
+            //CreateMap<Answer, AnswerResponseViewModel>();
         }
     }
 }

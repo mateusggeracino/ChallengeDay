@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SC.Services.Interfaces;
@@ -15,21 +12,21 @@ namespace SC.API.Controllers
     public class AwsnerController : ControllerBase
     {
         private readonly ILogger<AwsnerController> _logger;
-        private readonly IAwsnerServices _awsnerServices;
+        private readonly IAnswerServices _awsnerServices;
 
-        public AwsnerController(ILogger<AwsnerController> logger, IAwsnerServices awsnerServices)
+        public AwsnerController(ILogger<AwsnerController> logger, IAnswerServices answerServices)
         {
             _logger = logger;
-            _awsnerServices = awsnerServices;
+            _awsnerServices = answerServices;
         }
 
         [HttpPost]
-        public ActionResult<string> Post([FromHeader] int clientId, [FromBody] IEnumerable<AwsnerRequestViewModel> awsner)
+        public ActionResult<string> Post([FromHeader] int clientId, [FromBody] IEnumerable<AnswerRequestViewModel> answer)
         {
             try
             {
                 _logger.LogInformation("Post awsner");
-                _awsnerServices.Add(clientId, awsner);
+                _awsnerServices.Add(clientId, answer);
 
                 return Ok("success");
             }

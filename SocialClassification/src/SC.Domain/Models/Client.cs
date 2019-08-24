@@ -4,7 +4,7 @@ using SC.Domain.Models.Base;
 
 namespace SC.Domain.Models
 {
-    [Table("Persons")]
+    [Table("Client")]
     public sealed class Client : Entity
     {
         public string FullName { get; set; }

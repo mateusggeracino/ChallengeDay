@@ -9,6 +9,8 @@ namespace SC.Services.AutoMapper.Profiles
         public ViewModelToDomain()
         {
             CreateMap<ClientRequestViewModel, Client>();
+            CreateMap<AnswerRequestViewModel, Answer>();
+            //CreateMap<QuestionRequestViewModel, Question>();
         }
     }
 }

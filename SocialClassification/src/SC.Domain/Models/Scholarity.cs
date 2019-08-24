@@ -2,7 +2,7 @@
 
 namespace SC.Domain.Models
 {
-    public class Scholarity : Entity
+    public sealed class Scholarity : Entity
     {
         public string Description { get; set; }
         public short Point { get; set; }
