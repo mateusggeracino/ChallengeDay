@@ -1,7 +1,6 @@
 # ChallengeDay
 
 Time:
-
-Mateus G. Geracino
-Rafael 
-Lucas
+* Mateus G. Geracino
+* Rafael 
+* Lucas
